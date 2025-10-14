@@ -29,9 +29,25 @@
 		6F18BC062E98981100F6FAEF /* MovieBrowserAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieBrowserAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		6F18BC262E98A04500F6FAEF /* Exceptions for "MovieBrowserApp" folder in "MovieBrowserAppTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Features/MovieBrowsing/Models/MostPopularModel.swift,
+				Features/MovieBrowsing/Services/MoviesApiServices.swift,
+				Managers/MovieDB/MoviesDBManager.swift,
+				Managers/NetworkManager.swift,
+			);
+			target = 6F18BBFB2E98981100F6FAEF /* MovieBrowserAppTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		6F18BBEF2E98980F00F6FAEF /* MovieBrowserApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				6F18BC262E98A04500F6FAEF /* Exceptions for "MovieBrowserApp" folder in "MovieBrowserAppTests" target */,
+			);
 			path = MovieBrowserApp;
 			sourceTree = "<group>";
 		};
