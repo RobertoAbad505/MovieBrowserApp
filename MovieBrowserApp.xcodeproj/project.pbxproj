@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		6FA29A292E9F61D900F32690 /* readme.MD in Resources */ = {isa = PBXBuildFile; fileRef = 6FA29A282E9F61D300F32690 /* readme.MD */; };
+		6FA29A2B2E9F61FE00F32690 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 6FA29A2A2E9F61F800F32690 /* .gitignore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		6F18BBFD2E98981100F6FAEF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +32,8 @@
 		6F18BBED2E98980F00F6FAEF /* MovieBrowserApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieBrowserApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F18BBFC2E98981100F6FAEF /* MovieBrowserAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieBrowserAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F18BC062E98981100F6FAEF /* MovieBrowserAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieBrowserAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FA29A282E9F61D300F32690 /* readme.MD */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.MD; sourceTree = "<group>"; };
+		6FA29A2A2E9F61F800F32690 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -91,6 +98,8 @@
 		6F18BBE42E98980F00F6FAEF = {
 			isa = PBXGroup;
 			children = (
+				6FA29A282E9F61D300F32690 /* readme.MD */,
+				6FA29A2A2E9F61F800F32690 /* .gitignore */,
 				6F18BBEF2E98980F00F6FAEF /* MovieBrowserApp */,
 				6F18BBFF2E98981100F6FAEF /* MovieBrowserAppTests */,
 				6F18BC092E98981100F6FAEF /* MovieBrowserAppUITests */,
@@ -228,6 +237,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FA29A292E9F61D900F32690 /* readme.MD in Resources */,
+				6FA29A2B2E9F61FE00F32690 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
