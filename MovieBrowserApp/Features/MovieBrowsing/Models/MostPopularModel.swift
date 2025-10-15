@@ -45,14 +45,12 @@ struct MovieModel: Codable {
         case posterPath = "poster_path"
     }
     
-    func getPosterURL() -> URL? {
-        guard let posterPath, !posterPath.isEmpty else { return nil }
+    func getPosterURL() -> URL {
         let baseURL = "https://image.tmdb.org/t/p/w500"
-        return URL(string: baseURL + posterPath)
+        return URL(string: baseURL + (posterPath ?? ""))!
     }
-    func getBackdropURL() -> URL? {
-        guard let backdropPath, !backdropPath.isEmpty else { return nil }
+    func getBackdropURL() -> URL {
         let baseURL = "https://image.tmdb.org/t/p/w780"
-        return URL(string: baseURL + backdropPath)
+        return URL(string: baseURL + (backdropPath ?? ""))!
     }
 }

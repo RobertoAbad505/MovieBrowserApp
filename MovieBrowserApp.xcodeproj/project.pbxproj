@@ -42,6 +42,7 @@
 			membershipExceptions = (
 				Features/MovieBrowsing/Models/MostPopularModel.swift,
 				Features/MovieBrowsing/Services/MoviesApiServices.swift,
+				"Managers/Image+Cache.swift",
 				Managers/MovieDB/MoviesDBManager.swift,
 				Managers/NetworkManager.swift,
 			);

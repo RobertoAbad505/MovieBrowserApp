@@ -11,6 +11,7 @@ struct MovieItemView: View {
     @State var navigate: Bool = false
     let movie: MovieModel
     let designOrientation: UIDeviceOrientation
+    @State var image: UIImage?
     
     init(movie: MovieModel,_ orientation: UIDeviceOrientation = .portrait) {
         self.movie = movie
@@ -19,13 +20,22 @@ struct MovieItemView: View {
     var body: some View {
         NavigationLink(destination: MovieDetailView(movie: self.movie), isActive: $navigate) {
             VStack(alignment: .center) {
-                AsyncImage(url: movie.getPosterURL() ?? nil){ result in
-                    result.image?
+                
+                
+                if let image = self.image {
+                    Image(uiImage: image)
                         .resizable()
+                        .frame(width: designOrientation == .portrait ? 250:200,
+                               height: designOrientation == .portrait ? 250:200
+                        )
+                } else {
+                    ProgressView()
                 }
-                .frame(width: designOrientation == .portrait ? 250:200,
-                       height: designOrientation == .portrait ? 250:200
-                )
+                    
+//                AsyncImage(url: movie.getPosterURL() ?? nil){ result in
+//                    result.image?
+//                        .resizable()
+//                }
                 VStack(alignment: .leading) {
                     Text("🎥\(movie.originalTitle ?? "")")
                         .font(Font.caption.bold())
@@ -34,6 +44,9 @@ struct MovieItemView: View {
         }
         .onTapGesture {
             self.navigate.toggle()
+        }
+        .task {
+            self.image = try? await ImageCache.shared.loadImage(from: movie.getPosterURL())
         }
     }
 }
